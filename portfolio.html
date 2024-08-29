@@ -116,6 +116,79 @@
             </ul>
         </section>
 
+        <style>
+            /* Add this to your existing CSS */
+            .projects ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        
+            .projects li {
+                background-color: #f4f4f4;
+                margin: 10px 0;
+                padding: 20px;
+                border: 1px solid #ddd;
+                flex-basis: 30%;
+                position: relative;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                overflow: hidden;
+            }
+        
+            .projects li h3 {
+                margin: 0;
+                font-size: 1.2em;
+                transition: color 0.3s ease;
+            }
+        
+            .projects li p {
+                margin: 10px 0;
+                transition: color 0.3s ease;
+            }
+        
+            .projects li a {
+                color: #333;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+        
+            .projects li:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+        
+            .projects li:hover h3,
+            .projects li:hover p,
+            .projects li:hover a {
+                color: #007BFF;
+            }
+        
+            .projects li::before {
+                content: '';
+                position: absolute;
+                top: -100%;
+                left: -100%;
+                width: 200%;
+                height: 200%;
+                background: rgba(0, 123, 255, 0.1);
+                transform: rotate(45deg);
+                transition: all 0.5s ease;
+                z-index: -1;
+            }
+        
+            .projects li:hover::before {
+                top: -50%;
+                left: -50%;
+                width: 300%;
+                height: 300%;
+            }
+        
+            .projects li a:hover {
+                color: #0056b3;
+            }
+        </style>       
+        
         <section id="projects" class="projects">
             <h2>Projects</h2>
             <ul>
